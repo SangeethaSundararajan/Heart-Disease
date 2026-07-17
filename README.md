@@ -1,305 +1,88 @@
-# Customer Churn Prediction using Machine Learning
+#  Heart Disease Prediction using Machine Learning
 
-## Overview
+## Project Description
 
-Customer Churn Prediction is a machine learning project that predicts whether a customer is likely to discontinue a company's service based on customer information and usage patterns.
-
-This project uses a **Random Forest Classifier** to analyze customer data and classify customers into two categories:
-
-- **Churn = Yes** (Customer is likely to leave)
-- **Churn = No** (Customer is likely to stay)
-
-The project includes data preprocessing, feature engineering, model training, evaluation, and prediction on new customer data.
+This project predicts whether a person has heart disease based on health-related information using Machine Learning. The Random Forest Classifier algorithm is used to train the model and make predictions.
 
 ---
 
-## Project Objective
+## Dataset
 
-The primary objective of this project is to build a machine learning model that can identify customers who are at risk of leaving the company. Early prediction enables businesses to improve customer retention through targeted marketing and customer support strategies.
+The dataset contains the following features:
 
----
-
-## Features
-
-- Customer data preprocessing
-- Missing value handling
-- Label Encoding for categorical variables
-- Feature Scaling using StandardScaler
-- Train-Test Split
-- Random Forest Classification
-- Model Evaluation
-- Accuracy Score
-- Classification Report
-- Confusion Matrix
-- Predict new customer churn
-- Save trained model for future use
+- Age
+- Cholesterol
+- Blood Pressure
+- Maximum Heart Rate
+- Target (0 = No Heart Disease, 1 = Heart Disease)
 
 ---
 
 ## Technologies Used
 
-- Python 3.x
+- Python
 - Pandas
 - NumPy
+- Matplotlib
+- Seaborn
 - Scikit-learn
-- Joblib
-- Jupyter Notebook
 
 ---
 
-## Project Structure
+## Machine Learning Algorithm
 
-```
-Customer_Churn_Project/
-│
-├── customer_churn_dataset.csv
-├── train_model.ipynb
-├── train_model.py
-├── prediction.py
-├── saved_model.pkl
-├── scaler.pkl
-├── label_encoder.pkl
-├── requirements.txt
-├── README.md
-└── images/
-```
+- Random Forest Classifier
 
 ---
 
-## Dataset Information
+## Project Steps
 
-The dataset contains customer-related information used for churn prediction.
-
-### Features
-
-| Feature | Description |
-|----------|-------------|
-| Age | Customer age |
-| MonthlyIncome | Monthly income |
-| Tenure | Number of years as a customer |
-| SupportCalls | Number of customer support calls |
-| Churn | Target variable (Yes/No) |
+1. Import the required libraries.
+2. Load the dataset.
+3. Check and preprocess the data.
+4. Visualize the dataset.
+5. Split the data into training and testing sets.
+6. Scale the features.
+7. Train the Random Forest model.
+8. Predict the test data.
+9. Evaluate the model accuracy.
 
 ---
 
-## Machine Learning Workflow
+## How to Run
 
-```
-Customer Dataset
-        │
-        ▼
-Load Dataset
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
-Handle Missing Values
-        │
-        ▼
-Encode Categorical Features
-        │
-        ▼
-Split Training & Testing Data
-        │
-        ▼
-Feature Scaling
-        │
-        ▼
-Train Random Forest Model
-        │
-        ▼
-Model Evaluation
-        │
-        ▼
-Predict Customer Churn
-```
-
----
-
-## Installation
-
-Clone the repository
+### Install the required libraries
 
 ```bash
-git clone https://github.com/yourusername/customer-churn-prediction.git
+pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-Move into the project directory
+### Run the project
 
 ```bash
-cd customer-churn-prediction
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
+python train.py
 ```
 
 ---
 
-## Running the Project
+## Output
 
-Train the machine learning model
+The model predicts whether a patient has heart disease.
 
-```bash
-python train_model.py
-```
-
-Run prediction
-
-```bash
-python prediction.py
-```
-
-Or open
+Example Output:
 
 ```
-train_model.ipynb
+Model Accuracy: 0.87
 ```
-
-inside Jupyter Notebook or Google Colab.
-
----
-
-## Model Used
-
-**Random Forest Classifier**
-
-Reasons for choosing Random Forest:
-
-- High accuracy
-- Handles both numerical and categorical data
-- Reduces overfitting
-- Robust and reliable
-- Works well on structured datasets
-
----
-
-## Model Performance
-
-Example Results
-
-```
-Accuracy : 0.86
-```
-
-Classification Report
-
-```
-Precision : 0.87
-Recall    : 0.85
-F1 Score  : 0.86
-```
-
-> **Note:** The exact accuracy may vary depending on the dataset and train-test split.
-
----
-
-## Example Prediction
-
-Input
-
-```
-Age = 34
-MonthlyIncome = 55000
-Tenure = 6
-SupportCalls = 1
-```
-
-Output
-
-```
-Customer will Stay
-```
-
-Another Example
-
-```
-Age = 25
-MonthlyIncome = 22000
-Tenure = 1
-SupportCalls = 5
-```
-
-Output
-
-```
-Customer will Churn
-```
-
----
-
-## Applications
-
-This project can be applied in:
-
-- Banking
-- Telecommunications
-- Insurance
-- E-commerce
-- Subscription Services
-- Online Streaming Platforms
-- Retail Business
 
 ---
 
 ## Future Improvements
 
-- Hyperparameter tuning
-- Cross-validation
-- Feature selection
-- Model deployment using Flask or FastAPI
-- Web application integration
-- Real-time prediction API
-- Google Cloud Vertex AI deployment
-- Docker containerization
-
----
-
-## Requirements
-
-```
-Python 3.10+
-
-pandas
-numpy
-scikit-learn
-joblib
-matplotlib
-seaborn
-jupyter
-```
-
-Install all packages
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Learning Outcomes
-
-Through this project, you will learn:
-
-- Data preprocessing
-- Feature engineering
-- Label encoding
-- Feature scaling
-- Model training
-- Classification algorithms
-- Model evaluation
-- Machine learning workflow
-- Customer churn analysis
-- Prediction using trained models
-
----
-
-## License
-
-This project is developed for educational and learning purposes.
+- Use a larger dataset
+- Compare different machine learning algorithms
+- Build a web application using Flask or Streamlit
+- Improve model accuracy through hyperparameter tuning
 
 ---
 
@@ -307,18 +90,10 @@ This project is developed for educational and learning purposes.
 
 **Sangeetha**
 
-Bachelor of Computer Applications (BCA)
-
-Machine Learning | Artificial Intelligence | Full Stack Development
-
-GitHub: https://github.com/SangeethaSundararajan
+BCA (Artificial Intelligence and Machine Learning)
 
 ---
 
-## Acknowledgements
+## License
 
-- Scikit-learn
-- Pandas
-- NumPy
-- Python Community
-- Jupyter Notebook
+This project is created for educational and academic purposes.
